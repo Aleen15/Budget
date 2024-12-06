@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #020c5a, #0008fa);
+  }
+  
+  /* Navbar */
+  
+  
+  /* Content */
+  .content {
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    margin: 0;
+    color: white;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  
+  .btn-primary {
+    background: white;
+    color: #020c5a;
+    box-shadow: 0 0 10px #020c5a;
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 0 10px #020c5a;
+    background: linear-gradient(90deg, #020c5a, #0008fa);
+    color: white;
+    border: 1px solid #020c5a;
+  }
+  
+  /* Budget Summary */
+  .budget-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .budget-summary h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .budget-summary .budget-amount {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .progress-bar {
+    background-color: #e0e0e0;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .progress-bar .progress-fill {
+    height: 100%;
+    background-color: #0057ff;
+  }
+  
+  /* Expense History */
+  .expense-history {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .expense-history table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .expense-history th,
+  .expense-history td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .expense-history th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .expense-history tr:hover {
+    background-color: #f9f9f9;
+  }
+
+  .btn-plus{
+    display: flex;
+    
+  }
