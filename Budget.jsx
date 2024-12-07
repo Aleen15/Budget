@@ -19,6 +19,7 @@ const Budget = () => {
         </div>
 
         {/* Budget Summary */}
+        <div className="container" >
         <div className="budget-summary">
           <h3>v saiteja viswanath</h3>
           <div className="budget-amount">$789 / $7890</div>
@@ -43,13 +44,42 @@ const Budget = () => {
             <tbody>
               <tr>
                 <td>1</td>
-                <td>v saiteja viswanath</td>
+                <td>Bitcoins bought</td>
                 <td>$789</td>
                 <td>v saiteja viswanath</td>
                 <td>August 30, 2024 at 09:31 AM</td>
               </tr>
+              <tr>
+                <td>2</td>
+                <td>BNB bought</td>
+                <td>$850</td>
+                <td>v saiteja viswanath</td>
+                <td>October 13, 2024 at 01.00 PM</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Solana bought</td>
+                <td>$1000</td>
+                <td>v saiteja viswanath</td>
+                <td>October 15, 2024 at 09:31 AM</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Ethereum bought</td>
+                <td>$800</td>
+                <td>v saiteja viswanath</td>
+                <td>October 31, 2024 at 10.30 AM</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Bitcoin sold</td>
+                <td>$789</td>
+                <td>v saiteja viswanath</td>
+                <td>December 11, 2024 at 10.54 AM</td>
+              </tr>
             </tbody>
           </table>
+        </div>
         </div>
       </div>
     </div>
