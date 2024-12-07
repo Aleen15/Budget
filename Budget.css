@@ -55,6 +55,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    max-width: 500px;
+    width: 400px;
+    height: 100px;
   }
   
   .budget-summary h3 {
@@ -86,6 +89,10 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 600px;
+    height: 400px;
+    max-height: 800px;
   }
   
   .expense-history table {
@@ -113,4 +120,9 @@ body {
   .btn-plus{
     display: flex;
     
+  }
+
+  .budget-container .container{
+    display: flex;
+    justify-content: space-around;
   }
