@@ -184,7 +184,7 @@
 /* Expense history (right side) */
 .expense-history-container {
   flex: 2; /* Takes up more space than budget summary */
-  max-height: 600px; /* Set maximum height */
+  max-height: 700px; /* Set maximum height */
   overflow-y: auto; /* Enable vertical scroll */
   border: 1px solid #ddd;
   padding: 10px;
@@ -193,7 +193,7 @@
 
 /* Table styles for expense history */
 .expense-history table {
-  width: 100%;
+  width: 600px;
   border-collapse: collapse;
 }
 
