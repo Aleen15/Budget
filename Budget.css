@@ -96,6 +96,7 @@
 /* Expense Table */
 .expense-history table {
   width: 100%;
+  padding: 20px;
   border-collapse: collapse;
   margin-top: 10px;
   
@@ -103,7 +104,7 @@
 
 .expense-history th,
 .expense-history td {
-  padding: 8px;
+  padding: 20px;
   border: 1px solid #ddd;
   text-align: left;
 }
