@@ -1,128 +1,228 @@
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(90deg, #020c5a, #0008fa);
-  }
+/* Container */
+.container {
+  margin-top: 20px;
+}
+
+.header{
+  background: none;
+}
+
+.header h2{
+  color: white;
+}
+
+.budget-sum{
+  background-color: white;
+  width: 400px;
+  padding: 20px;
+  border-radius: 30px;
   
-  /* Navbar */
+}
+.budget-container{
+  background: linear-gradient(90deg, #020c5a, #0008fa);
+  height: 100%;
   
+}
+
+/* .content{
+  background: none;
+} */
+
+/*  */
+
   
-  /* Content */
-  .content {
-    padding: 20px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .header h2 {
-    margin: 0;
-    color: white;
-  }
-  
-  .btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: white;
-    font-size: 14px;
-    margin-right: 10px;
-  }
-  
-  .btn-primary {
-    background: white;
-    color: #020c5a;
-    box-shadow: 0 0 10px #020c5a;
-  }
-  
-  .btn-primary:hover {
-    box-shadow: 0 0 10px #020c5a;
-    background: linear-gradient(90deg, #020c5a, #0008fa);
-    color: white;
-    border: 1px solid #020c5a;
-  }
-  
-  /* Budget Summary */
   .budget-summary {
-    background-color: #fff;
-    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 15px 0; /* This provides spacing above and below each summary */
+    padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    max-width: 500px;
-    width: 400px;
-    height: 100px;
-  }
-  
-  .budget-summary h3 {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .budget-summary .budget-amount {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px 0;
-  }
-  
-  .progress-bar {
-    background-color: #e0e0e0;
-    height: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .progress-bar .progress-fill {
-    height: 100%;
-    background-color: #0057ff;
-  }
-  
-  /* Expense History */
-  .expense-history {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 600px;
-    height: 400px;
-    max-height: 800px;
-  }
-  
-  .expense-history table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  .expense-history th,
-  .expense-history td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .expense-history th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-  
-  .expense-history tr:hover {
-    background-color: #f9f9f9;
-  }
-
-  .btn-plus{
     display: flex;
-    
   }
+  
 
-  .budget-container .container{
-    display: flex;
-    justify-content: space-around;
-  }
+.container{
+  background: white;
+  border: 1px solid #ccc;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 8px;
+  width: 400px;
+  height: 200px;
+}
+
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .icon {
+  cursor: pointer;
+  margin-left: 10px;
+  color: red;
+} */
+
+.budget-amount {
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #eee;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #020c5a;
+  border-radius: 5px;
+}
+
+.summary-actions {
+  display: flex;
+  gap: 10px;
+  
+}
+
+.expense-history{
+  margin-left: 300px;
+}
+
+.expense-history h3{
+  color: white;
+}
+/* Expense Table */
+.expense-history table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  
+}
+
+.expense-history th,
+.expense-history td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Dialog Box */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.dialog-content label {
+  display: block;
+  margin-top: 10px;
+}
+
+.dialog-content input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.dialog-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-primary{
+  background: white;
+  color: #020c5a;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.btn-primary:hover{
+  background: linear-gradient(90deg, #020c5a, #0008fa);
+  box-shadow: 0 0 10px #020c5a;
+  /* background: white; */
+  color: white;
+}
+
+/* Scrollable budget summary */
+/* Main container for budgets and expense history */
+.budget-content {
+  display: flex; /* Use flexbox for alignment */
+  gap: 20px; /* Space between budget summary and expense history */
+}
+
+/* Budget summary (left side) */
+.budget-summary-container {
+  flex: 1; /* Takes up available space on the left */
+  max-height: 600px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scroll */
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Expense history (right side) */
+.expense-history-container {
+  flex: 2; /* Takes up more space than budget summary */
+  max-height: 600px; /* Set maximum height */
+  overflow-y: auto; /* Enable vertical scroll */
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Table styles for expense history */
+.expense-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.expense-history th,
+.expense-history td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.expense-history th {
+  background-color: #f4f4f4;
+}
+
+/* Custom scrollbar for both sections */
+.budget-summary-container::-webkit-scrollbar,
+.expense-history-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.budget-summary-container::-webkit-scrollbar-thumb,
+.expense-history-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.budget-summary-container::-webkit-scrollbar-thumb:hover,
+.expense-history-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
