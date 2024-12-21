@@ -1,115 +1,180 @@
-/* Container */
-.container {
-  margin-top: 20px;
-}
-
-.header{
-  background: none;
-}
-
-.header h2{
-  color: white;
-}
-
-.budget-sum{
-  background-color: white;
-  width: 400px;
-  padding: 20px;
-  border-radius: 30px;
-  
-}
-.budget-container{
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   background: linear-gradient(90deg, #020c5a, #0008fa);
-  height: 100%;
-  
 }
 
-/* .content{
-  background: none;
-} */
-
-/*  */
-
-  
-  .budget-summary {
-    border: 1px solid #ccc;
-    margin: 15px 0; /* This provides spacing above and below each summary */
-    padding: 10px;
-    border-radius: 8px;
-    display: flex;
-  }
-  
-
-.container{
-  background: white;
-  border: 1px solid #ccc;
-  margin: 15px 0;
-  padding: 10px;
-  border-radius: 8px;
-  width: 400px;
-  height: 200px;
+/* Budget Container */
+.budget-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure it takes full viewport height */
 }
 
+/* Content */
+.content {
+  flex: 1;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-left: 10px;
+}
 
-.summary-header {
+/* Header */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
-/* .icon {
-  cursor: pointer;
+.header h2 {
   margin-left: 10px;
-  color: red;
-} */
+  color: #020c5a; /* Assuming you want white text */
+}
+
+.header .btn-primary {
+  background: linear-gradient(90deg, #020c5a, #0008fa);
+  color: white;
+  padding: 10px 16px;
+  border: 1px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.header .btn-primary:hover {
+  box-shadow: 0 0 10px #020c5a;
+  background: white;
+  color: #020c5a;
+  border: 1px solid #020c5a;
+}
+
+/* Loading, Success, and Error messages */
+.loading,
+.success,
+.error {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.loading {
+  background-color: #ffdf6c;
+}
+
+.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.error {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Main Section */
+.main {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Budget Summary Section */
+.budget-summary-container {
+  flex: 1;
+  max-height: 80vh; /* Adjust as needed */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 10px;
+}
+
+.budget-summary {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.budget-summary h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.budget-summary p {
+  margin: 5px 0;
+  color: #555;
+}
 
 .budget-amount {
-  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007bff;
+  margin: 10px 0;
 }
 
 .progress-bar {
-  height: 10px;
-  background-color: #eee;
+  width: 100%;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
   margin: 10px 0;
-  border-radius: 5px;
 }
 
 .progress-fill {
   height: 100%;
   background-color: #020c5a;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .summary-actions {
   display: flex;
-  gap: 10px;
-  
-}
-
-.expense-history{
-  margin-left: 300px;
-}
-
-.expense-history h3{
-  color: white;
-}
-/* Expense Table */
-.expense-history table {
-  width: 100%;
-  padding: 20px;
-  border-collapse: collapse;
+  justify-content: space-between;
   margin-top: 10px;
-  
 }
 
-.expense-history th,
-.expense-history td {
+.summary-actions button {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  flex: 1;
+  margin-right: 5px;
+}
+
+.summary-actions button:last-child {
+  margin-right: 0;
+}
+
+.summary-actions button:hover {
+  background-color: #5a6268;
+}
+
+/* Expense History Section */
+.expense-history-container {
+  flex: 2;
+  /* background: white; */
   padding: 20px;
-  border: 1px solid #ddd;
-  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-height: 80vh; /* Align with budget-summary-container */
+  overflow-y: auto;
 }
 
-/* Dialog Box */
+/* ExpenseHistory Table Styles (Assuming you have some styles here) */
+/* You can customize this section based on your ExpenseHistory component */
+
+/* Dialog Styles */
 .dialog-overlay {
   position: fixed;
   top: 0;
@@ -123,107 +188,167 @@
 }
 
 .dialog-box {
-  background: #fff;
-  padding: 20px;
+  background-color: white;
+  padding: 30px;
   border-radius: 8px;
-  width: 300px;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-box h3 {
+  margin-top: 0;
+}
+
+.dialog-content {
+  margin-bottom: 20px;
 }
 
 .dialog-content label {
   display: block;
-  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .dialog-content input {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 .dialog-actions {
-  margin-top: 20px;
   display: flex;
   justify-content: space-between;
 }
 
-.btn-primary{
-  background: white;
-  color: #020c5a;
-  padding: 10px 15px;
+.dialog-actions button {
+  padding: 8px 16px;
   border: none;
-  border-radius: 40px;
+  border-radius: 4px;
   cursor: pointer;
-  margin: 0 5px;
 }
 
-.btn-primary:hover{
-  background: linear-gradient(90deg, #020c5a, #0008fa);
-  box-shadow: 0 0 10px #020c5a;
-  /* background: white; */
+.dialog-actions .btn-primary {
+  background-color: #007bff;
   color: white;
 }
 
-/* Scrollable budget summary */
-/* Main container for budgets and expense history */
-.budget-content {
-  display: flex; /* Use flexbox for alignment */
-  gap: 20px; /* Space between budget summary and expense history */
+.dialog-actions .btn-secondary {
+  background-color: #6c757d;
+  color: white;
 }
 
-/* Budget summary (left side) */
-.budget-summary-container {
-  flex: 1; /* Takes up available space on the left */
-  max-height: 600px; /* Set maximum height */
-  overflow-y: auto; /* Enable vertical scroll */
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
+.dialog-actions .btn-primary:hover {
+  background-color: #0056b3;
 }
 
-/* Expense history (right side) */
-.expense-history-container {
-  flex: 2; /* Takes up more space than budget summary */
-  max-height: 700px; /* Set maximum height */
-  overflow-y: auto; /* Enable vertical scroll */
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
+.dialog-actions .btn-secondary:hover {
+  background-color: #5a6268;
 }
 
-/* Table styles for expense history */
+/* Button Hover Effects */
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: #c82333;
+}
+
+.delete-btn i {
+  font-size: 20px;
+}
+
+/* Dialog Styles for Delete Confirmation */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dialog-box h3 {
+  margin-top: 0;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog-actions .btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.dialog-actions .btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.dialog-actions .btn-danger:hover {
+  background-color: #c82333;
+}
+
+.dialog-actions .btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.expense-history {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.expense-history h3{
+  color: white;
+}
+
 .expense-history table {
-  width: 600px;
+  width: 300px;
   border-collapse: collapse;
+  margin-top: 10px;
 }
 
 .expense-history th,
 .expense-history td {
-  border: 1px solid #ccc;
-  padding: 8px;
+  padding: 12px;
   text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 .expense-history th {
-  background-color: #f4f4f4;
+  background-color: #f8f9fa;
+  font-weight: bold;
 }
 
-/* Custom scrollbar for both sections */
-.budget-summary-container::-webkit-scrollbar,
-.expense-history-container::-webkit-scrollbar {
-  width: 8px;
+.expense-history td {
+  background-color: white;
 }
 
-.budget-summary-container::-webkit-scrollbar-thumb,
-.expense-history-container::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+.expense-history tr:hover {
+  background-color: #f1f1f1;
 }
-
-.budget-summary-container::-webkit-scrollbar-thumb:hover,
-.expense-history-container::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-
-
